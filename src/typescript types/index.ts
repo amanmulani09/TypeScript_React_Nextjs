@@ -97,3 +97,91 @@ let testAny; // if we don't provide any type it's type is implicitly any
 testAny= 12;
 testAny='hello world';
 
+
+
+//functions
+
+let sayHi = ()=>{
+    console.log("Hi",'welcome')
+}
+
+//function return type
+let funcReturnString = ():string=>{
+    return 'true';
+}
+
+let multiple = (num:number)=>{
+    return num*2
+}
+
+//optional parameter to the function;
+
+const sum = (num1:number,num2:number,initial?:number)=>{
+    return initial ? initial+(num1+num2): num1+num2;
+}
+
+sum(10,20,10);
+sum(10,20)
+
+//type aliasis
+
+type UserType = {
+    userName:string;
+    age:number;
+    phone?:string
+};
+
+let betterFunction = (user:UserType)=>{
+    console.log(user.age)
+}
+
+
+//function prototype type to create more function
+type myFunc = (a:number,b:string)=> void;
+
+let write : myFunc = (num,str)=>{
+console.log(num,str)
+}
+
+type UserType2 = {
+    userName:string;
+    age:number;
+    phone?:string;
+    theme:'dark'| 'light'
+}
+
+const userWithTheme:UserType2 = {
+    userName:'aman',
+    age:20,
+    theme:'dark',
+    phone:'737861799'
+}
+
+
+//Interfaces;
+//interfaces are more likely to types only but it is a advance version
+
+//the syntax to create interface is difference we're not using = operator
+
+//base interface
+interface IUser {
+userName:string;
+email:string;
+age:number;
+}
+
+//basically it has all the IUser types and also the employee Id type too
+interface IEmployee extends IUser{
+    employeeId:number;
+}
+
+const employee2:IEmployee = {
+    userName:'1',
+    email:'2',
+    age:20,
+    employeeId:777
+}
+
+//here is the simple rule to choose interface and type
+
+//if want to extend the type then go for interface if not just use type
