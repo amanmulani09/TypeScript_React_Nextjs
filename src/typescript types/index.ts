@@ -235,6 +235,47 @@ const testMe2:IPostEvenBetter<IAuthor> = {
     extra:[{id:1,username:'john'}]
 }
 
-//generics are used to define usetime types whenever we're using for data fetching and other
+const testMe3:IPostEvenBetter<ICategory>={
+    id:1,
+    title:'the title',
+    desc:"this is the post",
+    extra:[{id:1,title:'this is title'}]
+};
 
-// we can pass the another interface to the interface generics
+
+
+interface IEmployees<T>{
+    id:number,
+    role:string,
+    skills:T[]
+}
+
+
+const hmxEmployee:IEmployees<string> ={
+id:1,
+role:'front end developer',
+skills:['html','css','javaScript']
+};
+
+const joshEmployee:IEmployees<number>={
+    id:1,
+    role:'web',
+    skills:[1,2,3,4,5]
+}
+
+
+
+//interface and Generics practice
+
+
+interface IPractice1<T>{
+    id:1,
+    class:T
+}
+
+const stud1:IPractice1<number>={
+    id:1,
+    class:1
+}
+
+//what are the practicle use cases of generics 
