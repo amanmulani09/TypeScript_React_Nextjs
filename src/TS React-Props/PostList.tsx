@@ -5,8 +5,8 @@ import {useState,useEffect} from 'react'
 const PostList = ()=>{
 const [data,setData] = useState([])
 const getData = async()=>{
-    let res= await fetch('https://jsonplaceholder.typicode.com/posts');
-    return res.json();
+let res= await fetch('https://jsonplaceholder.typicode.com/posts');
+return res.json();
 }
 
 useEffect(()=>{
