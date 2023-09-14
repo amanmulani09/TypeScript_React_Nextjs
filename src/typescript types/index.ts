@@ -185,3 +185,56 @@ const employee2:IEmployee = {
 //here is the simple rule to choose interface and type
 
 //if want to extend the type then go for interface if not just use type
+
+//GENERICS
+
+interface IAuthor {
+    id:number,
+    username:string 
+}
+
+interface ICategory{
+    id:number,
+    title:string
+}
+interface Ipost {
+    id:number,
+    title:string,
+    desc:string;
+    extra:IAuthor[] | ICategory[]
+}
+
+
+
+interface IPostBetter<T> {
+    id:number,
+    title:string,
+    desc:string,
+    extra:T[]
+}
+
+const testMe:IPostBetter<string> = {
+    id:1,
+    title:'post title',
+    desc:'post description',
+    extra:['str','str2',]
+}
+
+
+interface IPostEvenBetter <T extends object>{
+    id:number,
+    title:string,
+    desc:string,
+    extra:T[]
+}
+
+const testMe2:IPostEvenBetter<IAuthor> = {
+    id:1,
+    title:'post title',
+    desc:'post description',
+    extra:[{id:1,username:'john'}]
+}
+
+//generics are used to define usetime types whenever we're using for data fetching and other
+
+// we can pass the another interface to the interface generics
