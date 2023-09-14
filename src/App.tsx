@@ -1,11 +1,11 @@
+
 import './App.css'
-import NameBadge from './component/NameBadge'
+import PostList from './TS React-Props/PostList'
 function App() {
 
   return (
     <>
-      <h1>hello World</h1>
-      <NameBadge name='aman' />
+      <PostList />
     </>
   )
 }

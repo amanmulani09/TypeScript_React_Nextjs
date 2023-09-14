@@ -279,3 +279,6 @@ const stud1:IPractice1<number>={
 }
 
 //what are the practicle use cases of generics 
+
+//1 to access any type of arg with type safety
+//2 code reusability and maintanibility
