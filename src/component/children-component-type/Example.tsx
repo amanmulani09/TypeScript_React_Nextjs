@@ -1,4 +1,3 @@
-import Child from "./Child"
 import Parent from "./Parent"
 import SecondChild from "./SecondChild"
 
