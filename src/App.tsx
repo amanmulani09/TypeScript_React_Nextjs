@@ -1,11 +1,11 @@
 
 import './App.css'
-import PostList from './TS React-Props/PostList'
+import Example from './component/children-component-type/Example'
 function App() {
 
   return (
     <>
-      <PostList />
+    <Example />
     </>
   )
 }

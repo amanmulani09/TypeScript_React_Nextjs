@@ -1,4 +1,4 @@
-import {PostCardProp} from '../types/types'
+import {PostCardProp} from '../../types/types'
 const PostCard = (props:PostCardProp)=>{
     return(
         <>

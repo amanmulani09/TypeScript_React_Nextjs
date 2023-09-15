@@ -1,4 +1,4 @@
-import { PostCardProp } from "../types/types";
+import { PostCardProp } from "../../types/types";
 import PostCard from "./PostCard";
 import {useState,useEffect} from 'react'
 
@@ -12,7 +12,7 @@ return res.json();
 useEffect(()=>{
 
 const fetchData = async()=>{
-    let data = await getData();
+    let data= await getData();
     setData(data)
 }
 fetchData();
